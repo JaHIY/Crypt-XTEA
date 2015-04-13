@@ -154,8 +154,8 @@ sub decrypt_block {
 sub key_setup {
     my $key_str = shift;
     croak( sprintf( 'key must be %s bytes long', $KEY_SIZE ) ) if length( $key_str ) != $KEY_SIZE;
-    my @tea_key = unpack 'N*', $key_str;
-    return \@tea_key;
+    my @xtea_key = unpack 'N*', $key_str;
+    return \@xtea_key;
 }
 
 =head1 SEE ALSO

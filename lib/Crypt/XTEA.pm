@@ -54,7 +54,7 @@ Returns the maximum XTEA key size, 16 bytes.
 
 =cut
 
-use constant keysize => $KEY_SIZE;
+sub keysize { $KEY_SIZE }
 
 =method blocksize
 
@@ -62,7 +62,7 @@ Returns the XTEA block size, which is 8 bytes. This function exists so that Cryp
 
 =cut
 
-use constant blocksize => $BLOCK_SIZE;
+sub blocksize { $BLOCK_SIZE }
 
 =method new
 
